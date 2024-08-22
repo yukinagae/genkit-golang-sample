@@ -5,6 +5,7 @@ go 1.22.3
 require (
 	github.com/PuerkitoBio/goquery v1.9.2
 	github.com/firebase/genkit/go v0.1.0
+	github.com/invopop/jsonschema v0.12.0
 )
 
 require (
@@ -15,6 +16,7 @@ require (
 	cloud.google.com/go/compute/metadata v0.4.0 // indirect
 	cloud.google.com/go/longrunning v0.5.9 // indirect
 	github.com/andybalholm/cascadia v1.3.2 // indirect
+	github.com/aymerick/raymond v2.0.2+incompatible // indirect
 	github.com/bahlo/generic-list-go v0.2.0 // indirect
 	github.com/buger/jsonparser v1.1.1 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
@@ -27,7 +29,6 @@ require (
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.3.2 // indirect
 	github.com/googleapis/gax-go/v2 v2.12.5 // indirect
-	github.com/invopop/jsonschema v0.12.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/wk8/go-ordered-map/v2 v2.1.8 // indirect
 	github.com/xeipuuv/gojsonpointer v0.0.0-20180127040702-4e3ac2762d5f // indirect
