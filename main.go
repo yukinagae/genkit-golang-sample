@@ -9,6 +9,8 @@ import (
 	"net/http"
 	"os"
 
+	_ "embed"
+
 	"github.com/PuerkitoBio/goquery"
 	"github.com/firebase/genkit/go/ai"
 	"github.com/firebase/genkit/go/genkit"
@@ -17,7 +19,8 @@ import (
 	"github.com/invopop/jsonschema"
 )
 
-const promptTemplate = `First, fetch this link: {{url}}. Then, summarize the content within 20 words.`
+//go:embed prompts/summarize.prompt
+var promptTemplate string
 
 type promptInput struct {
 	URL string `json:"url"`
