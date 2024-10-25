@@ -13,3 +13,4 @@ help:
 tidy:
 	go mod tidy -v
 	go fmt ./...
+	gofmt -s -w .
