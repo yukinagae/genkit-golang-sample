@@ -7,9 +7,6 @@ import (
 	"io"
 	"log"
 	"net/http"
-	"os"
-
-	_ "embed"
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/firebase/genkit/go/ai"
@@ -19,18 +16,12 @@ import (
 	"github.com/invopop/jsonschema"
 )
 
-//go:embed prompts/summarize.prompt
-var promptTemplate string
-
 type promptInput struct {
 	URL string `json:"url"`
 }
 
 func main() {
 	ctx := context.Background()
-
-	// Initialize environment variables
-	initEnv()
 
 	// Initialize the Google AI plugin
 	if err := googleai.Init(ctx, nil); err != nil {
@@ -51,7 +42,7 @@ func main() {
 	model := googleai.Model("gemini-1.5-flash")
 
 	summarizePrompt, err := dotprompt.Define("summarizePrompt",
-		promptTemplate,
+		"First, fetch this link: {{url}}. Then, summarize the content within 20 words.",
 		dotprompt.Config{
 			Model: model,
 			Tools: []ai.Tool{webLoader},
@@ -85,13 +76,6 @@ func main() {
 	// Initialize Genkit
 	if err := genkit.Init(ctx, nil); err != nil {
 		log.Fatalf("Failed to initialize Genkit: %v", err)
-	}
-}
-
-// initEnv initializes environment variables
-func initEnv() {
-	if os.Getenv("GOOGLE_GENAI_API_KEY") == "" {
-		log.Fatal("GOOGLE_GENAI_API_KEY environment variable is not set")
 	}
 }
 

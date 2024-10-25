@@ -8,11 +8,6 @@ help:
 	@echo 'Targets:'
 	@sed -n 's/^##//p' $(MAKEFILE_LIST) | column -t -s ':' | sed -e 's/^/  /'
 
-## genkit: Run Genkit locally
-.PHONY: genkit
-genkit:
-	genkit start
-
 ## tidy: Tidy modfiles and format .go files
 .PHONY: tidy
 tidy:

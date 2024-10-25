@@ -15,9 +15,9 @@ Verify your installations:
 
 ```bash
 $ go version
-v22.4.1
+go version go1.23.2 darwin/arm64
 $ genkit --version
-0.5.4
+0.5.10
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ Set your API key and start Genkit:
 
 ```bash
 $ export GOOGLE_GENAI_API_KEY=your_api_key
-$ make genkit # Starts Genkit
+$ genkit start -o # Starts Genkit
 ```
 
 Open your browser and navigate to [http://localhost:4000](http://localhost:4000) to access the Genkit UI.
