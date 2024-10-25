@@ -32,9 +32,7 @@ func main() {
 	webLoader := ai.DefineTool(
 		"webLoader",
 		"Loads a webpage and returns the textual content.",
-		func(ctx context.Context, input struct {
-			URL string `json:"url"`
-		}) (string, error) {
+		func(ctx context.Context, input promptInput) (string, error) {
 			return fetchWebContent(input.URL)
 		},
 	)
