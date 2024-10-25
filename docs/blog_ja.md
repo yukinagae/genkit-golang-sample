@@ -180,6 +180,6 @@ $ curl -X POST -H "Content-Type: application/json" -d '{"data": "https://firebas
 
 ## まとめ
 
-Firebase Genkit を使うことで、Go でも LLM アプリケーションを開発することができました。もっと詳しく知りたい人は、[公式ドキュメント](https://firebase.google.com/docs/genkit-go/get-started-go) を読んでみてください。または[Awesome リスト](https://github.com/xavidop/awesome-firebase-genkit)にも多くの記事や動画、サンプルがあるので参考にしてください。
+Firebase Genkit を使うことで、Go でも LLM アプリケーションを開発することができました。もっと詳しく知りたい人は、[公式ドキュメント](https://firebase.google.com/docs/genkit-go/get-started-go) を読んでみてください。または [Awesome リスト](https://github.com/xavidop/awesome-firebase-genkit)にも多くの記事や動画、サンプルがあるので参考にしてください。
 
 もし質問やフィードバックがあれば、[Discord](https://discord.gg/qXt5zzQKpc) や [GitHub](https://github.com/firebase/genkit/issues) を活用してください。
