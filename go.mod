@@ -4,7 +4,7 @@ go 1.22.3
 
 require (
 	github.com/PuerkitoBio/goquery v1.9.2
-	github.com/firebase/genkit/go v0.1.1
+	github.com/firebase/genkit/go v0.1.2
 	github.com/invopop/jsonschema v0.12.0
 )
 
