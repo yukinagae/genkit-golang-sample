@@ -33,7 +33,7 @@ Check the versions of Go and Genkit with the following commands:
 $ go version
 go version go1.23.2 darwin/arm64
 $ genkit --version
-0.5.10
+0.9.1
 ```
 
 You can either create your own Genkit project based on the official documentation [Get started with Genkit using Go (alpha)](https://firebase.google.com/docs/genkit-go/get-started-go) and modify the code, or clone the sample project:
@@ -50,7 +50,7 @@ You can set the API key as an environment variable and start the Genkit server w
 
 ```bash
 $ export GOOGLE_GENAI_API_KEY=your_api_key
-$ genkit start -o # Starts Genkit
+$ genkit start -o -- go run main.go
 ```
 
 The `-o` option automatically opens a browser, allowing you to access the developer UI at http://localhost:4000 to input prompts and debug.

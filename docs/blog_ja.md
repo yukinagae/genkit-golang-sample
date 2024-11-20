@@ -33,7 +33,7 @@ https://github.com/yukinagae/genkit-golang-sample
 $ $ go version
 go version go1.23.2 darwin/arm64
 $ genkit --version
-0.5.10
+0.9.1
 ```
 
 公式ドキュメントの [Get started with Genkit using Go (alpha) ](https://firebase.google.com/docs/genkit-go/get-started-go) を元に自分で Genkit プロジェクトを作成してコードをいじってもいいですし、サンプルプロジェクトをクローンしてもいいです。
@@ -50,7 +50,7 @@ $ git clone https://github.com/yukinagae/genkit-golang-sample
 
 ```bash
 $ export GOOGLE_GENAI_API_KEY=your_api_key
-$ genkit start -o # Starts Genkit
+$ genkit start -o -- go run main.go
 ```
 
 `-o` オプションをつけることで、自動的にブラウザが開き、http://localhost:4000 にアクセスすることで開発者用 UI でプロンプトを入力したり、デバッグしたりできます。
